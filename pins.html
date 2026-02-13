@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PINS</title>
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<style>
+    /* General Styles */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        width: 100%;
+        top: 0%;
+        left: 0%;
+        right: 0%;
+        backdrop-filter: blur(2px);
+    }
+
+    nav .nav-center {
+        width: 100%;
+        max-width: 800px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+    nav ul li {
+        list-style: none;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    nav ul li a:hover {
+        color: lavender;
+
+    }
+
+    .left img {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: baseline;
+        padding-top: 20px;
+    }
+
+    body {
+        color: #fff !important;
+        background-color: #171717 !important;
+        background-size: 100px 100px !important;
+        width: 100%;
+        font-family: "inter", sans-serif;
+    }
+
+    body::before {
+        content: "";
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(circle, rgba(251, 251, 251, 0.3), rgba(255, 255, 255, 0));
+        filter: blur(100px);
+        z-index: -1;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+            opacity: 0.7;
+        }
+
+        50% {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+
+        100% {
+            transform: scale(1);
+            opacity: 0.7;
+        }
+    }
+
+    /* Gallery Container */
+    .gallery {
+        column-count: 2;
+        /* Creates two columns */
+        column-gap: 15px;
+        padding: 20px;
+        max-width: 800px;
+        margin: auto;
+    }
+
+    /* Image Styling */
+    .gallery img {
+        width: 100%;
+        margin-bottom: 15px;
+        /* Adds space between images */
+        border-radius: 10px;
+        break-inside: avoid;
+        /* Prevents images from breaking across columns */
+    }
+
+    /* Responsive: 1 Column on Small Screens */
+    @media screen and (max-width: 600px) {
+        .gallery {
+            /* column-count: 1; */
+            max-width: 500px;
+        }
+        .nav-center{
+            flex-direction: column;
+        }
+        nav ul{
+            padding-top: 5px;
+        }
+    }
+
+
+    .footer p {
+        font-family: "forum", serif;
+        font-size: 17px;
+        color: #fff;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .footer {
+        width: 100%;
+        padding: 20px;
+        border-radius: 10px;
+    }
+</style>
+
+<body>
+    <nav>
+        <div class="nav-center">
+            <div class="left"><img src="shreyan2.png" alt=""></div>
+            <div class="right">
+                <ul>
+                    <li><a href="site1.html">HOME</a></li>
+                    <li><a href="work.html">WORK</a></li>
+                    <li><a href="#">PINS</a></li>
+                    <li><a href="mailto:smffpu2007@gmail.com">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="gallery">
+        <img src="shr2.jpg" alt="Image 1">
+        <img src="shr.jpeg" alt="">
+        <img src="cat.jpeg" alt="Image 2">
+        <img src="flowers.jpeg" alt="Image 3">
+        <img src="bw.jpeg" alt="Image 4">
+        <img src="daisy.jpeg" alt="Image 5">
+        <img src="guitar.jpeg" alt="Image 6">
+    </div>
+</body>
+<footer class="footer">
+    <p>Developed by Shreyan Majumdar</p>
+</footer>
